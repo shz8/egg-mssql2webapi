@@ -20,9 +20,7 @@
 [download-image]: https://img.shields.io/npm/dm/egg-mssql2webapi.svg?style=flat-square
 [download-url]: https://npmjs.org/package/egg-mssql2webapi
 
-<!--
-Description here.
--->
+将mssql的sql、pro转为webapi
 
 ## Install
 
@@ -45,9 +43,36 @@ exports.mssql2webapi = {
 ```js
 // {app_root}/config/config.default.js
 exports.mssql2webapi = {
+  urlprefix: '/api/',
+  apitable: {
+    emr: {// api/emr/
+      db: {
+        server: 'd.vy01.com',
+        user: 'sa',
+        password: 'test.123456',
+        database: 'db1',
+      },
+      apis: [{
+        name: 'getuser',
+        sql: 'api_getuser',
+        type: 'pro',
+        result:'object'
+      }, {
+        name: 'findusers',
+        sql: 'select * from users where objectstatus>0',
+        type: 'sql',
+        result:'array'
+      }],
+    },
+    ris: {
+      db: {},
+      apis: [],
+    },
+  },
 };
 ```
-
+http://127.0.0.1:7001/emr/getuser?usercode=2
+http://127.0.0.1:7001/emr/findusers
 see [config/config.default.js](config/config.default.js) for more detail.
 
 ## Example
