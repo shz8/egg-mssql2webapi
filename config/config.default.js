@@ -7,10 +7,10 @@
  */
 exports.mssql2webapi = {
   urlprefix: '/api/',
-  clients: {
+  apitable: {
     emr: {// api/emr/
       db: {
-        server: 'db1',
+        server: 'd.vy01.com',
         user: 'sa',
         password: 'test.123456',
         database: 'db1',
@@ -19,10 +19,12 @@ exports.mssql2webapi = {
         name: 'getuser',
         sql: 'api_getuser',
         type: 'pro',
+        result:'object'
       }, {
         name: 'findusers',
         sql: 'select * from users where objectstatus>0',
         type: 'sql',
+        result:'array'
       }],
     },
     ris: {
