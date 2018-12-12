@@ -42,12 +42,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/eggjs/egg-mssql2webapi.git"
+    "url": "git+https://github.com/shz8/egg-mssql2webapi.git"
   },
   "bugs": {
     "url": "https://github.com/eggjs/egg/issues"
   },
-  "homepage": "https://github.com/eggjs/egg-mssql2webapi#readme",
+  "homepage": "https://github.com/shz8/egg-mssql2webapi#readme",
   "author": "zht",
   "license": "MIT"
 }
