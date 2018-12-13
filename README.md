@@ -53,12 +53,12 @@ exports.mssql2webapi = {
         database: 'db1',
       },
       apis: [{
-        name: 'getuser', //http://127.0.0.1:7001/emr/getuser?usercode=2
+        name: 'getuser', //http://127.0.0.1:7001/api/emr/getuser?usercode=2
         sql: 'api_getuser',
         type: 'pro',
         result:'object'
       }, {
-        name: 'findusers',//http://127.0.0.1:7001/emr/findusers
+        name: 'findusers',//http://127.0.0.1:7001/api/emr/findusers
         sql: 'select * from users where objectstatus>0',
         type: 'sql',
         result:'array'
@@ -71,8 +71,8 @@ exports.mssql2webapi = {
   },
 };
 ```
-http://127.0.0.1:7001/emr/getuser?usercode=2   
-http://127.0.0.1:7001/emr/findusers   
+http://127.0.0.1:7001/api/emr/getuser?usercode=2   
+http://127.0.0.1:7001/api/emr/findusers   
 see [config/config.default.js](config/config.default.js) for more detail.
 
 ## Example
